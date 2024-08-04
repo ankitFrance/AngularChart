@@ -1,0 +1,52 @@
+[
+  {
+    "postId": 1,
+    "id": 1,
+    "city": "Cairo",
+    "temp17": 30,
+    "temp18": 33,
+    "continent": "Africa"
+  },
+   {
+    "postId": 100,
+    "id": 2,
+    "city": "Tehran",
+    "temp17": 34,
+    "temp18": 31,
+    "continent": "Asia"
+  },
+  {
+    "postId": 100,
+    "id": 3,
+    "city": "Paris",
+    "temp17": 24,
+    "temp18": 27,
+    "continent": "Europe"
+  }, 
+  {
+    "postId": 100,
+    "id": 4,
+    "city": "Madrid",
+    "temp17": 17,
+    "temp18": 11,
+    "continent": "Europe"
+  },
+  {
+    "postId": 100,
+    "id": 5,
+    "city": "Yerevan",
+    "temp17": 39,
+    "temp18": 38,
+    "continent": "Asia"
+  },
+  {
+    "postId": 100,
+    "id": 6,
+    "city": "Tunis",
+    "temp17": 28,
+    "temp18": 30,
+    "continent": "Africa"
+  }
+
+
+]

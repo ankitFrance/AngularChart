@@ -1,0 +1,58 @@
+<div class="container" style="padding-top: 20px; padding-bottom: 20px;">
+  <div class="row">
+
+
+    <div class="col-md-12"> 
+      <div class="card" style="background-color: white; border: 2px solid darkblue;">
+        <div class="card-body">
+          <canvas id="myChart" style="color: white;">
+
+          </canvas>
+        </div>
+      </div>
+    </div>  
+
+  </div>
+</div>
+
+
+
+ <!------------------------------------------------->
+ <div class="container" style="padding-top: 20px; padding-bottom: 20px; background-color: rgb(255, 255, 255);" >
+ <div class="row" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+ <div class="col-md-4" > 
+  <div class="card" style="background-color: #404040; color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Minimum temperature in 2017 </h5>
+      <p class="card-text">{{minimumTemp17}} - {{minimumTempCity17}}</p>
+      <h5 class="card-title">Maximum temperature in 2017 </h5>
+      <p class="card-text">{{maximumTemp17}} - {{maximumTempCity17}}</p>
+
+      <h5 class="card-title">Minimum temperature in 2018 </h5>
+      <p class="card-text">{{minimumTemp18}} - {{minimumTempCity18}}</p>
+      <h5 class="card-title">Maximum temperature in 2018 </h5>
+      <p class="card-text">{{maximumTemp18}} - {{maximumTempCity18}}</p>
+    </div>
+  </div>
+</div>  
+
+  <div class="col-md-4"> 
+    <p>Variation in temperature from 2017-18 for each city</p>
+    <canvas id="variationsChart"></canvas>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="container" style="padding-top: 20px; padding-bottom: 20px; justify-content: center; text-align: center;">
+ 
+  <div class="row">
+    <div class="col-md-6" style="border: 2px solid darkblue; background-color: white;"> 
+      <p>Average temp of each continent for year 2017</p>
+      <canvas id="myBarChart"></canvas>
+
+    </div>
+  </div>
+</div>

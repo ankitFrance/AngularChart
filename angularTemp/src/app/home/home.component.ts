@@ -25,6 +25,7 @@ export class HomeComponent implements AfterViewInit {
   maximumTempCity18: string | undefined;
   variations: number[] = [];
   ContTempDetailsObj: { [key: string]: number } = {};
+  myChart: Chart | undefined;
 
   constructor() {}
 
@@ -33,7 +34,7 @@ export class HomeComponent implements AfterViewInit {
       // Create bar chart
       const ctxBar = (document.getElementById('myChart') as HTMLCanvasElement).getContext('2d');
       if (ctxBar) {
-        new Chart(ctxBar, {
+        this.myChart = new Chart(ctxBar, {
           type: 'bar',
           data: {
             labels: this.cities,
@@ -296,9 +297,28 @@ getRandomColor(): string {
 
   console.log(this.ContTempDetailsObj)
 
+}
 
-  
 
+filterData(city: string) {
+  if (this.myChart) {
+    const cityIndex = this.cities.indexOf(city);
+    
+    if (cityIndex !== -1) {
+      // Create arrays to hold filtered data
+      const filteredCities = [this.cities[cityIndex]];
+      const filteredTemps17 = [this.temperatures17[cityIndex]];
+      const filteredTemps18 = [this.temperatures18[cityIndex]];
+
+      // Update chart data
+      this.myChart.data.labels = filteredCities;
+      this.myChart.data.datasets[0].data = filteredTemps17;
+      this.myChart.data.datasets[1].data = filteredTemps18;
+
+      // Refresh the chart
+      this.myChart.update();
+    }
+  }
 }
 
 }

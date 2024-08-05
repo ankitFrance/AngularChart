@@ -1,0 +1,22 @@
+<table style="width: 100%; border-collapse: collapse; margin: 20px auto; background-color: #003366; color: white; font-size: 16px;">
+  <thead style="background-color: #002244;">
+    <tr>
+     
+      <th style="padding: 12px 15px; border-bottom: 2px solid #0056b3;">ID</th>
+      <th style="padding: 12px 15px; border-bottom: 2px solid #0056b3;">City</th>
+      <th style="padding: 12px 15px; border-bottom: 2px solid #0056b3;">Temperature 2017</th>
+      <th style="padding: 12px 15px; border-bottom: 2px solid #0056b3;">Temperature 2018</th>
+      <th style="padding: 12px 15px; border-bottom: 2px solid #0056b3;">Continent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #004080; border-bottom: 1px solid #003366;" *ngFor="let item of data">
+      
+      <td style="padding: 12px 15px;">{{ item.id }}</td>
+      <td style="padding: 12px 15px;">{{ item.city }}</td>
+      <td style="padding: 12px 15px;">{{ item.temp17 }}</td>
+      <td style="padding: 12px 15px;">{{ item.temp18 }}</td>
+      <td style="padding: 12px 15px;">{{ item.continent }}</td>
+    </tr>
+  </tbody>
+</table>

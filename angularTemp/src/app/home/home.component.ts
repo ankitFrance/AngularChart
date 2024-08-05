@@ -302,23 +302,32 @@ getRandomColor(): string {
 
 filterData(city: string) {
   if (this.myChart) {
-    const cityIndex = this.cities.indexOf(city);
-    
-    if (cityIndex !== -1) {
-      // Create arrays to hold filtered data
-      const filteredCities = [this.cities[cityIndex]];
-      const filteredTemps17 = [this.temperatures17[cityIndex]];
-      const filteredTemps18 = [this.temperatures18[cityIndex]];
+    if (city === 'all') {
+      // Show all data
+      this.myChart.data.labels = this.cities;
+      this.myChart.data.datasets[0].data = this.temperatures17;
+      this.myChart.data.datasets[1].data = this.temperatures18;
+    } else {
+      // Filter data based on the selected city
+      const cityIndex = this.cities.indexOf(city);
+      
+      if (cityIndex !== -1) {
+        // Create arrays to hold filtered data
+        const filteredCities = [this.cities[cityIndex]];
+        const filteredTemps17 = [this.temperatures17[cityIndex]];
+        const filteredTemps18 = [this.temperatures18[cityIndex]];
 
-      // Update chart data
-      this.myChart.data.labels = filteredCities;
-      this.myChart.data.datasets[0].data = filteredTemps17;
-      this.myChart.data.datasets[1].data = filteredTemps18;
-
-      // Refresh the chart
-      this.myChart.update();
+        // Update chart data
+        this.myChart.data.labels = filteredCities;
+        this.myChart.data.datasets[0].data = filteredTemps17;
+        this.myChart.data.datasets[1].data = filteredTemps18;
+      }
     }
+
+    // Refresh the chart
+    this.myChart.update();
   }
 }
+
 
 }
